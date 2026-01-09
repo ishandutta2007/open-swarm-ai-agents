@@ -1,0 +1,203 @@
+[MASTER]
+
+# A comma-separated list of package or module names from which C extensions may
+# be loaded. Extensions are loading into the active Python interpreter and may
+# run arbitrary code.
+extension-pkg-whitelist=
+
+# A comma-separated list of plugin modules to load during analysis.
+load-plugins=
+
+# Pickle collected data for later comparisons.
+persistent=yes
+
+# Specify a configuration file.
+#rcfile=
+
+# Use multiple processes to speed up Pylint.
+#jobs=1
+
+[MESSAGES CONTROL]
+
+# Only show warnings with the listed confidence levels. Leave empty to show
+# all. Valid levels: HIGH, INFERENCE, INFERENCE_FAILURE, UNDEFINED.
+confidence=
+
+# Disable the message, report, category or checker with the given id(s). You can
+# either give a numeric id for a message or a symbolic name. You can also use
+# glob patterns to disable a whole category of messages.
+#disable=
+
+# Enable the message, report, category or checker with the given id(s). You can
+# either give a numeric id for a message or a symbolic name. You can also use
+# glob patterns to enable a whole category of messages.
+#enable=
+
+[REPORTS]
+
+# Set the output format. Available formats are text, parseable, colorized, json
+# and msvs (visual studio). You can also give a reporter class, e.g.
+# mypackage.mymodule.MyReporter.
+output-format=text
+
+# Put messages in a separate file for each module / package specified on the
+# command line instead of printing them on stdout.
+#files-output=no
+
+# Tells whether to display a full report or only the messages
+#reports=no
+
+# Activate the evaluation score.
+#evaluation=10.0 - ((float(5 * error + warning + refactor + convention) / statement) * 10)
+
+# Add a comment according to your coding style convention
+#comment=no
+
+[FORMAT]
+
+# Expected format of line numbers in messages.
+#expected-line-ending-format=
+
+# Regexp for a line that is allowed to be longer than the limit.
+ignore-long-lines=^\s*(# )?<?https?://\S+>?$
+
+# Number of spaces of indentation for each level of block.
+indent-string='    '
+
+# Maximum number of characters on a single line.
+max-line-length=100
+
+# Maximum number of lines in a module.
+max-module-lines=1000
+
+# List of optional constructs for which indentation is checked.
+#indent-after-paren=4
+
+[BASIC]
+
+# Naming style for argument names.
+#argument-naming-style=snake_case
+
+# Naming style for attribute names.
+#attr-naming-style=snake_case
+
+# Naming style for class attribute names.
+#class-attribute-naming-style=any
+
+# Naming style for class names.
+#class-naming-style=PascalCase
+
+# Naming style for constant names.
+#const-naming-style=UPPER_CASE
+
+# Naming style for function names.
+#function-naming-style=snake_case
+
+# Good variable names which should always be accepted, separated by a comma.
+good-names=i,j,k,ex,Run,_,
+           
+# Bad variable names which should always be rejected, separated by a comma.
+bad-names=foo,bar,baz,toto,tata,tutu
+
+# Regular expression which should only match function or class names that do
+# not require a docstring.
+no-docstring-rgx=^_
+
+# Regular expression which should only match functions or classes that do not
+# require a docstring.
+#no-docstring-rgx=^_
+
+# Regular expression which should only match modules that do not require a
+# docstring.
+#module-rgx=.*
+
+[VARIABLES]
+
+# List of additional names supposed to be defined in builtins. Remember that
+# you should avoid to define new builtins when possible.
+#init-import=no
+
+# Tells whether we should check for unused import in __init__ files.
+#check-init-import=no
+
+# A regular expression matching the name of dummy variables (i.e. expected to
+# not be used).
+dummy-variables-rgx=_+$|dummy
+
+# List of variable names used to define introspection-based communication
+# protocols (e.g. used by Twisted).
+#callbacks=cb_,
+#          _cb
+
+# List of qualified module names which can be imported but are not detected by
+# pylint.
+#ignored-classes=
+
+# List of member names, which should be excluded from the protected access
+# check.
+#ignored-members=
+
+[DESIGN]
+
+# Maximum number of arguments for function / method
+max-args=5
+
+# Maximum number of attributes for a class (see R0902).
+max-attributes=7
+
+# Maximum number of boolean expressions in an if statement (see R0916).
+max-bool-expr=5
+
+# Maximum number of branches for function / method body
+max-branches=12
+
+# Maximum number of locals for function / method body
+max-locals=15
+
+# Maximum number of parents for a class (see R0901).
+max-parents=7
+
+# Maximum number of public methods for a class (see R0904).
+max-public-methods=20
+
+# Maximum number of return statements for function / method body
+max-returns=6
+
+# Maximum number of statements in function / method body
+max-statements=50
+
+# Minimum number of public methods for a class (see R0903).
+min-public-methods=2
+
+[CLASSES]
+
+# List of method names used to declare metaclasses.
+#defining-metaclass-method=__new__
+
+# List of valid names for the first argument in a class method.
+#valid-classmethod-first-arg=cls
+
+# List of valid names for the first argument in a metaclass class method.
+#valid-metaclass-classmethod-first-arg=mcs
+
+[IMPORTS]
+
+# List of module names that can be imported at any level, not just the top
+# level one.
+#allow-any-import-level=
+
+# Deprecated modules which should not be used, separated by a comma.
+deprecated-modules=regsub,TERMIOS,Bastion,rexec
+
+# Create a graph of every failing import in Graphviz format.
+#import-graph=
+
+# Create a CSV file containing all the top-level modules available on the
+# Python path.
+#modules-list=
+
+[EXCEPTIONS]
+
+# Exceptions that will emit a warning when being caught. Defaults to
+# (BaseException, Exception).
+overgeneral-exceptions=BaseException, Exception

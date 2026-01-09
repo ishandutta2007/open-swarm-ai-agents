@@ -1,0 +1,13 @@
+apply plugin: 'python'
+
+repositories {
+    pydev
+}
+
+dependencies {
+    py "pytest"
+}
+
+task hello(type: PyExec) {
+    command "echo", "Hello from Gradle"
+}

@@ -1,0 +1,13 @@
+service: my-service
+
+provider:
+  name: aws
+  runtime: python3.8
+
+functions:
+  hello:
+    handler: src/main.hello
+    events:
+      - http:
+          path: hello
+          method: get

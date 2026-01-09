@@ -1,0 +1,8 @@
+image: python:3.8
+
+pipelines:
+  default:
+    - step:
+        script:
+          - pip install -r requirements.txt
+          - pytest
